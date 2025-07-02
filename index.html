@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DEJAVU</title>
+    <link rel="icon" href="/img/icon.png" type="img/png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <div class="logo">DEJAVU</div>
+        <nav class="nav">
+          <div class="hero-social-buttons">
+            <a href="#" class="social main">
+              <img src="img/main.png" alt="Discord" />
+              <span>Головна</span>
+            </a>
+            <a
+              href="https://t.me/dreamyrchs"
+              class="social telegram"
+              target="_blank"
+            >
+              <img src="img/telegram.png" alt="Telegram" />
+              <span>Telegram</span>
+            </a>
+            <a
+              href="https://discord.gg/tJapQ2VURA"
+              class="social discord"
+              target="_blank"
+            >
+              <img src="img/discord.png" alt="Discord" />
+              <span>Discord</span>
+            </a>
+            <a href="rules.html" class="social main">
+              <img src="img/rules.png" alt="Правила" />
+              <span>Правила</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Поринь у лампову атмосферу разом із DEJAVU</h1>
+        <p>Ти — не просто гравець. Ти частина світу.</p>
+        <a href="#" class="cta-button" id="copyIP"
+          >IP: dejavu.minecraftjoin.xyz</a
+        >
+        <a href="#" class="cta-button" id="copyPort">Для Bedrock: Port 25877</a>
+        <div class="cta-discord">
+          <a
+            href="https://discord.gg/tJapQ2VURA"
+            class="cta-button-discord"
+            target="_blank"
+          >
+            Приєднуйтесь до спільноти Discord!</a
+          >
+        </div>
+
+        <script>
+          function setupCopyButton(buttonId, extractTextFn) {
+            const button = document.getElementById(buttonId);
+            button.addEventListener("click", () => {
+              const textToCopy = extractTextFn(button.textContent);
+              if (textToCopy) {
+                navigator.clipboard
+                  .writeText(textToCopy)
+                  .then(() => {
+                    button.classList.add("copied");
+                    setTimeout(() => button.classList.remove("copied"), 1000);
+                  })
+                  .catch(console.error);
+              }
+            });
+          }
+          setupCopyButton("copyIP", (text) => text.split("IP: ")[1] || text);
+          setupCopyButton("copyPort", (text) => {
+            const portMatch = text.match(/Port\s+(\d+)/);
+            return portMatch ? portMatch[1] : "";
+          });
+        </script>
+      </div>
+      <div class="hero-image">
+        <img src="img/hero.png" alt="Зображення сервера" />
+      </div>
+    </section>
+
+    <section class="info-cards">
+      <div class="card">
+        <h3>Ідея</h3>
+        <p>
+          Грабельний світ сильно зменшено. Натомість в доступі гравців є
+          збільшена кількість структур та цілих 3 закинутих міста, які можно
+          облутати та здобути ресурси. Головна мета для гравців - побудувати
+          гарне місто, з яким в них будуть теплі спогади
+        </p>
+      </div>
+      <div class="card">
+        <h3>Спавн-поселення</h3>
+        <p>
+          Гравець зʼявляється на заготовленому спавні, таке собі кемпінгове
+          містечко, багато палаток для кожного гравця, згодом замість палаток
+          побудуються помешкання.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Прогресс</h3>
+        <p>
+          Прокачка гравців відбувається шляхом луту данжів, та користуванням
+          столом чарувань і ковадлом. Ніяких жителів на мапі не буде.
+        </p>
+      </div>
+      <div class="center-row">
+        <div class="card">
+          <h3>Концепція міста</h3>
+          <p>
+            Будівництво будівель → дає +XP бонус при чаруванні (ефективно, бо
+            ферми досвіду будуть малоефективні на сервері)
+          </p>
+        </div>
+        <div class="card">
+          <h3>Гільдії</h3>
+          <p>
+            Гравці можуть створити міні-групи, які будують окремі частини міста
+            (наприклад, “Квартал Дощу”, “Механічна Вежа”). Нагороди будуть
+            видаватись по мірі розвитку районів.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="gallery-item">
+        <img src="img/img1.png" alt="1" />
+        <p>ПОКРАЩЕНА СИСТЕМА РИБАЛКИ</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/img2.jpg" alt="2" />
+        <p>ГРЕЙЛІСТ</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/img3.png" alt="3" />
+        <p>VOICE-CHAT</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/img4.png" alt="4" />
+        <p>АУРИ ТА СЛІДИ</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/img5.jpg" alt="5" />
+        <p>МАШТАБНІ БИТВИ</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/img6.jpg" alt="6" />
+        <p>СИСТЕМА RPG</p>
+      </div>
+    </section>
+    <section class="social-links">
+      <h2>Ми з вами!</h2>
+      <div class="social-buttons">
+        <a
+          href="https://discord.gg/tJapQ2VURA"
+          class="social discord"
+          target="_blank"
+        >
+          <img src="img/discord.png" alt="Discord" />
+          <span>Discord</span>
+        </a>
+        <a
+          href="https://t.me/dreamyrchs"
+          class="social telegram"
+          target="_blank"
+        >
+          <img src="img/telegram.png" alt="Telegram" />
+          <span>Telegram</span>
+        </a>
+      </div>
+    </section>
+    <section class="social-links">
+      <div class="social-buttons">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfhFzfhlpWaH9Tlv5lKPjpUwFcWs00AQ5D2JmaebX6wPvBoNQ/viewform"
+          class="social beta"
+          target="_blank"
+        >
+          <img src="img/beta-logo.png" alt="Стати бета-тестером" />
+          <span>Стати бета-тестером</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>&copy; 2025 DEJAVU Server. Усі права захищені.</p>
+        <div class="footer-links">
+          <a href="rules.html">Правила</a>
+          <a href="https://discord.gg/tJapQ2VURA" target="_blank">Підтримка</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
