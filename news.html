@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Новини | DEJAVU</title>
+    <link rel="icon" href="/img/icon.png" type="img/png" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        padding-top: 100px;
+      }
+      main {
+        flex: 1;
+      }
+      .news-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #f5c518;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        text-shadow: 0 0 5px #f5c51850;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <div class="logo">DEJAVU</div>
+        <nav class="nav">
+          <div class="hero-social-buttons">
+            <a href="index.html" class="social main">
+              <img src="img/main.png" alt="Головна" />
+              <span>Головна</span>
+            </a>
+            <a href="news.html" class="social main">
+              <img src="img/news.png" alt="Новини" />
+              <span>Новини</span>
+            </a>
+            <a
+              href="https://t.me/dreamyrchs"
+              class="social telegram"
+              target="_blank"
+            >
+              <img src="img/telegram.png" alt="Telegram" />
+              <span>Telegram</span>
+            </a>
+            <a
+              href="https://discord.gg/tJapQ2VURA"
+              class="social discord"
+              target="_blank"
+            >
+              <img src="img/discord.png" alt="Discord" />
+              <span>Discord</span>
+            </a>
+            <a href="rules.html" class="social main">
+              <img src="img/rules.png" alt="Правила" />
+              <span>Правила</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1 class="news-title">Новини DEJAVU</h1>
+
+      <section class="news-cards">
+        <div class="card">
+          <a
+            href="post-6.30.25.html"
+            style="text-decoration: none; color: inherit"
+          >
+            <img
+              src="img/news/6.30.25.png"
+              alt="Новина"
+              style="width: 100%; border-radius: 8px; margin-bottom: 1rem"
+            />
+            <h3>АЛЬФА-ТЕСТ 1 стартував!</h3>
+            <p>
+              Ми розпочали <strong>першу хвилю альфа-тестування</strong> нашого
+              проєкту! Головна мета — перевірити базову стабільність сервера та
+              отримати живий фідбек від гравців. 🌐
+            </p>
+            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem">
+              30 червня 2025
+            </p>
+          </a>
+        </div>
+        <div></div>
+        <div></div>
+        <!-- Можна додати більше новин -->
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>&copy; 2025 DEJAVU Server. Усі права захищені.</p>
+        <div class="footer-links">
+          <a href="rules.html">Правила</a>
+          <a href="https://discord.gg/tJapQ2VURA" target="_blank">Підтримка</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

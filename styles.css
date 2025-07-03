@@ -418,7 +418,13 @@ body {
 .hero-social-buttons .main:hover {
   box-shadow: 0 0 10px #f5c518;
 }
-/* Медіа-запити для екранів до 1024px */
+.news-cards .card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
 @media (max-width: 1024px) {
   .hero-image {
     display: none;
@@ -430,14 +436,11 @@ body {
   }
 }
 
-/* Медіа-запити для екранів до 768px */
 @media (max-width: 768px) {
-  /* Загальні стилі */
   body {
     margin-top: 20px;
   }
 
-  /* Верхня панель */
   .topbar {
     max-width: 90%;
     padding: 0.5rem 1rem;
@@ -454,7 +457,6 @@ body {
     margin-bottom: 0.5rem;
   }
 
-  /* Навігація */
   .hero-social-buttons {
     flex-direction: column;
     gap: 0.5rem;
@@ -465,7 +467,6 @@ body {
     justify-content: center;
   }
 
-  /* Герой-секція */
   .hero-section {
     padding: 2rem 1rem;
     text-align: center;
@@ -481,7 +482,6 @@ body {
     max-width: 100%;
   }
 
-  /* Кнопки IP/порту */
   .cta-button,
   .cta-button-discord {
     padding: 0.6rem 1rem;
@@ -495,7 +495,6 @@ body {
     margin-top: 1rem;
   }
 
-  /* Картки */
   .info-cards,
   .rules-list {
     grid-template-columns: 1fr;
@@ -515,13 +514,11 @@ body {
     width: 100%;
   }
 
-  /* Галерея */
   .gallery {
     grid-template-columns: 1fr;
     padding: 1.5rem 1rem;
   }
 
-  /* Футер */
   .footer {
     padding: 1.5rem 1rem;
   }
@@ -532,7 +529,6 @@ body {
     gap: 0.5rem;
   }
 
-  /* Мобільна навігація */
   .hero-social-buttons {
     flex-direction: row;
     flex-wrap: wrap;
@@ -556,8 +552,30 @@ body {
     margin-right: 0.3rem;
   }
 }
+.news-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+  background: #1a1a1a;
+  max-width: 1200px;
+  margin: auto;
+}
 
-/* Медіа-запити для екранів до 480px */
+.news-cards .card {
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-cards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #f5c51866;
+  border-color: #f5c518;
+}
+
 @media (max-width: 480px) {
   .hero-content h1 {
     font-size: 1.8rem;
@@ -576,7 +594,6 @@ body {
   }
 }
 
-/* Медіа-запити для екранів до 1440px */
 @media (max-width: 1440px) {
   .topbar {
     position: static;
@@ -593,10 +610,9 @@ body {
 
   body {
     margin-top: 0;
+    padding-top: 0;
   }
-}
 
-/* Медіа-запити для дуже малих екранів (менше 400px) */
 @media (max-width: 400px) {
   .hero-social-buttons {
     gap: 0.2rem;
