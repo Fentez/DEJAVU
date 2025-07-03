@@ -339,7 +339,6 @@ body {
   flex: 0 0 calc(33.333% - 1rem);
 }
 
-/* 2 картки */
 .news-cards:has(.card:nth-child(1):nth-last-child(2)) {
   display: flex;
   justify-content: center;
