@@ -330,6 +330,24 @@ body {
   background: #be7f36;
   box-shadow: 0 0 100px #be7f36;
 }
+.news-cards:has(.card:nth-child(1):nth-last-child(1)) {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.news-cards:has(.card:nth-child(1):nth-last-child(1)) .card {
+  flex: 0 0 calc(33.333% - 1rem);
+}
+
+/* 2 картки */
+.news-cards:has(.card:nth-child(1):nth-last-child(2)) {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.news-cards:has(.card:nth-child(1):nth-last-child(2)) .card {
+  flex: 0 0 calc(33.333% - 1rem);
+}
 
 @media (max-width: 768px) {
   .info-cards {
